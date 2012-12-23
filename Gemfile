@@ -10,6 +10,10 @@ gem 'ruby-oci8'
 # Use either latest oracle_enhanced adapter
 gem 'activerecord-oracle_enhanced-adapter', '~>1.4.0'
 
+# gems used for dev and test
+group :development, :test do
+	gem 'rspec-rails', '2.11.0'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,6 +28,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# include capybara for simulating user interaction
+group :test do
+	gem 'capybara', '1.1.2'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
